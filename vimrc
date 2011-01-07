@@ -35,14 +35,27 @@ set ruler               " Sýna ávallt staðsetningu __cursor
 set title               " Birta titil
 set smarttab            " Virkja smarttab fídus 
 set incsearch           " Virkja incremental search sem leitar í skjali meðan á innslætti stendur.
-
+set t_Co=256            " terminal styður 256 liti
+" Virkja liti skv. setningarfræði þegar terminal getur sýnt liti
+" ásamt því að lýsa upp síðustu leitarskilyrði
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
 " Birta tákn fyrir línubil, nbsp og tab
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅
-
-" litaþema sjá :h colourscheme
-colorscheme desert
-
+colorscheme desert 	" litaþema sjá :h colorscheme
+let &guicursor = &guicursor . ",a:blinkon0"	"Slökkvum á blikkandi bendli
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Skráarumsýsla og setningarfræði skráa 
+" (files and syntax highlighting)
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Stilla samanbrot á kóða eftir setningarfræði tungumáls en bíðum með
+" að virkja nema með zi, zr, zR ofl. samanbrotsskipunum. 
+setlocal foldmethod=syntax
+setlocal nofoldenable
+filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Sérsniðnir flýtilyklar
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -52,3 +65,12 @@ colorscheme desert
 " ræsa hann mv. neðangreint með ,ff 
 let mapleader = ","
 " Héreftir er hægt að nota <leader> sem tilvísun í , sem leader.
+
+""""""""""""""""""""""
+" NERDTree Stillingar
+""""""""""""""""""""""
+nnoremap <leader>d :NERDTreeToggle<cr>	"Nota d sem flýtilykil
+
+let NERDChristmasTree = 1               " Virkja liti í NERDTree
+let NERDTreeHighlightCursorline = 1     " Lýsa upp bendil
+let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna greinar
