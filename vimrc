@@ -1,4 +1,4 @@
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""
 " Höfundur: Samúel Jón Gunnarsson
 " Lýsing: vim resource skrá aka vimrc
 "
@@ -12,6 +12,11 @@
 " SnipMate: https://github.com/msanders/snipmate.vim/tree
 " VimRails: http://github.com/tpope/vim-rails
 " Fugitive: http://github.com/tpope/vim-fugitive
+"
+" Það fyrsta sem við viljum kalla á er pathogen til að hlaða inn
+" viðbótum :
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 " Kannar hvort stýrikerfisumhverfi sé stillt í unicode og stillir
 " fileencodings í samræmi við það sjá :h v:lang og :h fileencodings
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
@@ -47,5 +52,3 @@ colorscheme desert
 " ræsa hann mv. neðangreint með ,ff 
 let mapleader = ","
 " Héreftir er hægt að nota <leader> sem tilvísun í , sem leader.
-
-
