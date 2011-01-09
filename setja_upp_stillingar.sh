@@ -1,5 +1,11 @@
 #!/bin/bash
-
+# Höfundur: Samúel Jón Gunnarsson
+# Lýsing: Setur .vim og .vimrc upp ásamt því að taka afrit 
+# af fyrri stillingum.
+#
+# Todo: 
+# Bæta við athugun á stýrikerfi og Git forritum
+###########################################################
 DAGS=`date +%y%m%d%H%M`
 
 function saekja_config () {
