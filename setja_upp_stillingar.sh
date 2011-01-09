@@ -13,11 +13,14 @@ function saekja_config () {
 }
 
 function stofna_vimrc () {
-	 ln -s ~/vim/vimrc ~/.vimrc
+	 ln -s ~/.vim/vimrc ~/.vimrc
 }
 
-read -sn 1 -p "Hef innsetningu á vim stillingum.\nÝttu á j til að halda áfram eða einhvern annan hnapp til að hætta við"
-if [ $REPLY == 'j' ];
+echo "***************************************************************************"
+echo "Hef innsetningu á vim stillingum"
+echo "***************************************************************************"
+read -sn 1 -p "Ýttu á j til að halda áfram eða einhvern annan hnapp til að hætta við"
+if [ "$REPLY" == "j" ];
 then
 	if [ -d ~/.vim ];
 	then
@@ -34,6 +37,11 @@ then
 	else
 		stofna_vimrc
 	fi
+	echo "***************************************************************************"
+	echo "* I haz success ! Fyrri stillingar afritaðar sem .vimrc.$DAGS og .vim.$DAGS"
+	echo "***************************************************************************"
 else
-	echo "Hætt var við innsetningu"
+	echo "***************************************************************************"
+	echo "Hætt var við innsetningu. Snökt :("
+	echo "***************************************************************************"
 fi
