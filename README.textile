@@ -1,6 +1,7 @@
 h1. Vim stillingar Samma
 
 h2. Inngangur
+
 Ég er búin að nota vi/vim ritilinn síðan ég komst fyrst í kynni við Linux stýrikerfi í kringum 1995. Síðan þá hef ég upplifað "haltu mér / slepptu mér" samband varðandi það að nota hann. Síðustu 2 árin hef ég verið að nota vim meir og meir eftir að ég fór að stilla hann betur af miðað við hvernig ég vill að góður textaritill hegði sér. 
 
 Ég hvet alla sem þá sem geta nýtt sér þessar stillingar og hafa tillögur að betrumbótum að senda mér línu eða að "fork-a" þessa kóðahirslu og gera að sinni eigin. Ekki væri verra ef það skilaði sér í betri stillingum fyrir mig líka. 
