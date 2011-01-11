@@ -17,6 +17,10 @@
 " viðbótum :
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+" lesa inn staðbundnar vimrc stillingar ef þær finnast 
+if filereadable(".vimrc.local")
+  source .vimrc.local
+endif
 " Kannar hvort stýrikerfisumhverfi sé stillt í unicode og stillir
 " fileencodings í samræmi við það sjá :h v:lang og :h fileencodings
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
