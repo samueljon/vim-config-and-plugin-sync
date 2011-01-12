@@ -8,7 +8,7 @@ h2. Inngangur
 
 h2. Viðbætur 
 
-Eftirfarandi viðbætur koma í þessari kóðahirslu:
+Eftirfarandi viðbætur koma með í þessari kóðahirslu:
 
 * "Fugitive":https://github.com/tpope/vim-fugitive hjálpar þér við að halda utan um git kóðahirslur.
 * "NERDTree":https://github.com/scrooloose/nerdtree er fyrsta flokks skráarvafri f. vim með meiru.
