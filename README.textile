@@ -15,7 +15,7 @@ Eftirfarandi viðbætur koma í þessari kóðahirslu:
 * "Snipmate":https://github.com/msanders/snipmate.vim líkir eftir snippet virkni sem finnst í TextMate ritlinum á makka.
 * "Rails":https://github.com/tpope/vim-rails viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
 * "JSLint":https://github.com/hallettj/jslint.vim hjálpar við að greina forritunarvillur í javascript kóða. 
-* "JSBeautifier":http://www.vim.org/scripts/script.php?script_id=2727 hreinsar og stillir upp javascript kóðanum þínu. 
+* "JSBeautifier":http://www.vim.org/scripts/script.php?script_id=2727 hreinsar og stillir upp javascript kóðanum þínum. 
 
 h2. Uppsetning
 
@@ -23,14 +23,14 @@ h2. Uppsetning
 
 Eftirfarandi aðgerðir sækja uppsetningarskriftuna, gera hana keyrsluhæfa ásamt því að keyra hana. Þegar skriftan er keyrð þá tekur hún afrit af núverandi .vimrc stillingarskrá og .vim möppu ef þær eru til staðar og sækir stillingarnar af github. 
 <pre>
-# wget --no-check-certificate https://github.com/samueljon/vim-config-and-plugin-sync/raw/master/setja_upp_stillingar.sh
-# chmod +x setja_upp_stillingar.sh
-# ./setja_upp_stillingar.sh
+wget --no-check-certificate https://github.com/samueljon/vim-config-and-plugin-sync/raw/master/setja_upp_stillingar.sh
+chmod +x setja_upp_stillingar.sh
+./setja_upp_stillingar.sh
 </pre>
 
 h2. Notkun
 
-Ég ætla ekki að reyna að útskýra grunnaðgerðir í vi/vim en bendi á vefi eins og http://vimcasts.org í þeim tilfellum. Ég reyni að skjala vimrc skránna eftir bestu getu og ætti sú skjölun að útskýra helstu virkni.
+Ég ætla ekki að reyna að útskýra grunnaðgerðir í vi/vim en bendi á vefi eins og http://vimcasts.org:http://vimcasts.org en þar má finna mjög góða kennslu í formi videóupptakna og handritum af þeim. Vimrc stillingarskráin er skjöluð eftir bestu getu og ætti að útskýra flest af þeim valkostum sem valdir hafa verið.
 
 h2. Aðgerðalistinn
 
