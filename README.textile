@@ -5,15 +5,28 @@ h2. Inngangur
 Ég er búin að nota vi/vim ritilinn síðan ég komst fyrst í kynni við Linux stýrikerfi í kringum 1995. Síðan þá hef ég upplifað "haltu mér / slepptu mér" samband varðandi það að nota hann. Síðustu 2 árin hef ég verið að nota vim meir og meir eftir að ég fór að stilla hann betur af miðað við hvernig ég vill að góður textaritill hegði sér. 
 
 Ég hvet alla sem þá sem geta nýtt sér þessar stillingar og hafa tillögur að betrumbótum að senda mér línu eða að "fork-a" þessa kóðahirslu og gera að sinni. Ekki væri verra ef það skilaði sér í betri stillingum fyrir mig líka. 
+h2. Viðbætur 
+
+Eftirfarandi viðbætur koma í þessari kóðahirslu:
+
+* "Fugitive":https://github.com/tpope/vim-fugitive hjálpar þér við að halda utan um git kóðahirslur.
+* "NERDTree":https://github.com/scrooloose/nerdtree er fyrsta flokks skráarvafri f. vim með meiru.
+* "NERDCommenter":https://github.com/scrooloose/nerdcommenter er viðbót sem einfaldar skjölun á kóða.
+* "Snipmate":https://github.com/msanders/snipmate.vim líkir eftir snippet virkni sem finnst í TextMate ritlinum á makka.
+* "Rails":https://github.com/tpope/vim-rails viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
+* "JSLint":https://github.com/hallettj/jslint.vim hjálpar við að greina forritunarvillur í javascript kóða. 
+* "JSBeautifier":http://www.vim.org/scripts/script.php?script_id=2727 hreinsar og stillir upp javascript kóðanum þínu. 
 
 h2. Uppsetning
 
 Í dag er eingöngu uppsetningarskrifta fyrir unix ættuð stýrikerfi eins og linux/macosx/unix
 
 Eftirfarandi aðgerðir sækja uppsetningarskriftuna, gera hana keyrsluhæfa ásamt því að keyra hana. Þegar skriftan er keyrð þá tekur hún afrit af núverandi .vimrc stillingarskrá og .vim möppu ef þær eru til staðar og sækir stillingarnar af github. 
+<pre>
 # wget --no-check-certificate https://github.com/samueljon/vim-config-and-plugin-sync/raw/master/setja_upp_stillingar.sh
 # chmod +x setja_upp_stillingar.sh
 # ./setja_upp_stillingar.sh
+</pre>
 
 h2. Notkun
 
