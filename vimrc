@@ -51,6 +51,15 @@ set list
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅
 colorscheme desert 	" litaþema sjá :h colorscheme
 let &guicursor = &guicursor . ",a:blinkon0"	"Slökkvum á blikkandi bendli
+" Show the current command in the lower right corner
+set showcmd
+" Show the current mode
+set showmode
+augroup indent_settings
+    au!
+    au BufEnter *.html setl autoindent smartindent
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Skráarumsýsla og setningarfræði skráa 
 " (files and syntax highlighting)

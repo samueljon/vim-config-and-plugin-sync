@@ -19,3 +19,6 @@
 [submodule "bundle/jslint"]
 	path = bundle/jslint
 	url = https://github.com/hallettj/jslint.vim.git
+[submodule "bundle/wikipedia.vim"]
+	path = bundle/wikipedia.vim
+	url = https://github.com/vim-scripts/wikipedia.vim.git

@@ -17,6 +17,7 @@ Eftirfarandi viðbætur koma með í þessari kóðahirslu:
 * "Rails":https://github.com/tpope/vim-rails viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
 * "JSLint":https://github.com/hallettj/jslint.vim hjálpar við að greina forritunarvillur í javascript kóða. 
 * "JSBeautifier":http://www.vim.org/scripts/script.php?script_id=2727 hreinsar og stillir upp javascript kóðanum þínum. 
+* "wikipedia.vim":https://github.com/vim-scripts/wikipedia.vim til að lita wikipedia skrár (.wiki) skv. setningarfræði wikipedia.
 
 h2. Uppsetning
 
