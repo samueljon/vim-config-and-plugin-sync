@@ -10,7 +10,7 @@ DAGS=`date +%y%m%d%H%M`
 
 function saekja_config () {
 	echo "Sæki stillingar frá github"
-	git clone git@github.com:samueljon/vim-config-and-plugin-sync.git ~/.vim
+	git clone https://samueljon@github.com/samueljon/vim-config-and-plugin-sync.git ~/.vim
 	cd ~/.vim
 	echo "Virkja viðbætur"
 	git submodule init

@@ -18,6 +18,7 @@ Eftirfarandi viðbætur koma með í þessari kóðahirslu:
 * "JSLint":https://github.com/hallettj/jslint.vim hjálpar við að greina forritunarvillur í javascript kóða. 
 * "JSBeautifier":http://www.vim.org/scripts/script.php?script_id=2727 hreinsar og stillir upp javascript kóðanum þínum. 
 * "wikipedia.vim":https://github.com/vim-scripts/wikipedia.vim til að lita wikipedia skrár (.wiki) skv. setningarfræði wikipedia.
+* "Vim Colours Solarized":https://github.com/altercation/vim-colors-solarized snilldarlitaþema frá "Ethan Schoonover":http://ethanschoonover.com/
 
 h2. Uppsetning
 

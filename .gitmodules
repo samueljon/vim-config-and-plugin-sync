@@ -22,3 +22,6 @@
 [submodule "bundle/wikipedia.vim"]
 	path = bundle/wikipedia.vim
 	url = https://github.com/vim-scripts/wikipedia.vim.git
+[submodule "bundle/vim-colors-solarized.git"]
+	path = bundle/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git

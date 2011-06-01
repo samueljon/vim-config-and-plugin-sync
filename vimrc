@@ -49,7 +49,8 @@ endif
 " Birta tákn fyrir línubil, nbsp og tab
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅
-colorscheme desert 	" litaþema sjá :h colorscheme
+set background=dark " Sjá readme f. litaþema solarized. Fyrir ljóst þema notið background=light
+colorscheme solarized " litaþema sjá :h colorscheme
 let &guicursor = &guicursor . ",a:blinkon0"	"Slökkvum á blikkandi bendli
 " Show the current command in the lower right corner
 set showcmd
