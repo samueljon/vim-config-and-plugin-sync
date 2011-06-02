@@ -39,13 +39,16 @@ set ruler               " Sýna ávallt staðsetningu __cursor
 set title               " Birta titil
 set smarttab            " Virkja smarttab fídus 
 set incsearch           " Virkja incremental search sem leitar í skjali meðan á innslætti stendur.
-set t_Co=256            " terminal styður 256 liti
+set wildmenu		" Aðstoð við að ljúka við orð (completion)
+	set t_Co=256    " terminal styður 256 liti
 " Virkja liti skv. setningarfræði þegar terminal getur sýnt liti
 " ásamt því að lýsa upp síðustu leitarskilyrði
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
+set tags=tags;/
+
 " Birta tákn fyrir línubil, nbsp og tab
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅
@@ -69,7 +72,8 @@ augroup END
 " að virkja nema með zi, zr, zR ofl. samanbrotsskipunum. 
 setlocal foldmethod=syntax
 setlocal nofoldenable
-filetype plugin indent on
+filetype indent on
+filetype plugin on
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Sérsniðnir flýtilyklar
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,7 +83,10 @@ filetype plugin indent on
 " ræsa hann mv. neðangreint með ,ff 
 let mapleader = ","
 " Héreftir er hægt að nota <leader> sem tilvísun í , sem leader.
-
+" Músaraðgerðir
+nnoremap <2-LeftMouse> <C-]> "Leyfir tvíklikk sem hoppar í taglist-a
+nnoremap <MiddleMouse> <C-T> "Hoppar tilbaka úr taglista
+set mouse=a 
 """"""""""""""""""""""
 " NERDTree Stillingar
 """"""""""""""""""""""
@@ -88,3 +95,16 @@ nnoremap <leader>d :NERDTreeToggle<cr>	"Nota d sem flýtilykil
 let NERDChristmasTree = 1               " Virkja liti í NERDTree
 let NERDTreeHighlightCursorline = 1     " Lýsa upp bendil
 let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna greinar
+
+""""""""""""""""""""""
+" Stillingar fyrir kóðaaðstoð (code completion) - omnicomplete.
+""""""""""""""""""""""
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+" let Tlist_Ctags_Cmd = '/usr/local/bin/jsctags'

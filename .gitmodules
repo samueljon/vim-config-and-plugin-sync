@@ -25,3 +25,9 @@
 [submodule "bundle/vim-colors-solarized.git"]
 	path = bundle/vim-colors-solarized.git
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-taglist-plus.git"]
+	path = bundle/vim-taglist-plus.git
+	url = https://github.com/int3/vim-taglist-plus.git
+[submodule "bundle/supertab.git"]
+	path = bundle/supertab.git
+	url = https://github.com/ervandew/supertab.git
