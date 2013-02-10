@@ -13,8 +13,6 @@ Eftirfarandi viðbætur koma með í þessari kóðahirslu:
 * "Fugitive":https://github.com/tpope/vim-fugitive hjálpar þér við að halda utan um git kóðahirslur.
 * "NERDTree":https://github.com/scrooloose/nerdtree er fyrsta flokks skráarvafri f. vim með meiru.
 * "NERDCommenter":https://github.com/scrooloose/nerdcommenter er viðbót sem einfaldar skjölun á kóða.
-* "Snipmate":https://github.com/msanders/snipmate.vim líkir eftir snippet virkni sem finnst í TextMate ritlinum á makka.
-* "Supertab":https://github.com/ervandew/supertab bætir við TAB autocompletion á allar autocompletion efnisorð sem vim er fær um að fletta upp.c
 * "Rails":https://github.com/tpope/vim-rails viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
 * "Taglist-plus":https://github.com/int3/vim-taglist-plus útbýr tag skrár fyrir javascriptskrár með aðstoð "doctorjs aka jsctags":http://doctorjs.org/, "nodejs":http://nodejs.org/. "Leiðbeiningar":http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/
 * "JSLint":https://github.com/hallettj/jslint.vim hjálpar við að greina forritunarvillur í javascript kóða. 
