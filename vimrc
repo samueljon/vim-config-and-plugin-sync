@@ -13,10 +13,26 @@
 " VimRails: http://github.com/tpope/vim-rails
 " Fugitive: http://github.com/tpope/vim-fugitive
 "
-" Það fyrsta sem við viljum kalla á er pathogen til að hlaða inn
+" Það fyrsta sem við viljum kalla á er vundle til að hlaða inn
 " viðbótum :
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-haml'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'hallettj/jslint.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'puppetlabs/puppet-syntax-vim'
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
   source .vimrc.local
@@ -39,8 +55,8 @@ set ruler               " Sýna ávallt staðsetningu __cursor
 set title               " Birta titil
 set smarttab            " Virkja smarttab fídus 
 set incsearch           " Virkja incremental search sem leitar í skjali meðan á innslætti stendur.
-set wildmenu		" Aðstoð við að ljúka við orð (completion)
-	set t_Co=256    " terminal styður 256 liti
+set wildmenu            " Aðstoð við að ljúka við orð (completion)
+set t_Co=256    " terminal styður 256 liti
 " Virkja liti skv. setningarfræði þegar terminal getur sýnt liti
 " ásamt því að lýsa upp síðustu leitarskilyrði
 if &t_Co > 2 || has("gui_running")
@@ -72,6 +88,7 @@ augroup END
 " að virkja nema með zi, zr, zR ofl. samanbrotsskipunum. 
 setlocal foldmethod=syntax
 setlocal nofoldenable
+filetype off
 filetype indent on
 filetype plugin on
 "for Syntastic
@@ -93,21 +110,10 @@ set mouse=a
 """"""""""""""""""""""
 " NERDTree Stillingar
 """"""""""""""""""""""
-nnoremap <leader>d :NERDTreeToggle<cr>	"Nota d sem flýtilykil
+nnoremap <leader>t :NERDTreeToggle<cr>	"Nota d sem flýtilykil
 
 let NERDChristmasTree = 1               " Virkja liti í NERDTree
 let NERDTreeHighlightCursorline = 1     " Lýsa upp bendil
 let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna greinar
-
-""""""""""""""""""""""
-" Stillingar fyrir kóðaaðstoð (code completion) - omnicomplete.
-""""""""""""""""""""""
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
 
 " let Tlist_Ctags_Cmd = '/usr/local/bin/jsctags'
