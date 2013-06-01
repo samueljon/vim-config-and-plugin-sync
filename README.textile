@@ -9,7 +9,7 @@ h2. Inngangur
 h2. Viðbætur 
 
 Eftirfarandi viðbætur koma með í þessari kóðahirslu:
-
+* "Vundle": https://github.com/gmarik/vundle sér um utanumhald á vim viðbótum. 
 * "Fugitive":https://github.com/tpope/vim-fugitive hjálpar þér við að halda utan um git kóðahirslur.
 * "NERDTree":https://github.com/scrooloose/nerdtree er fyrsta flokks skráarvafri f. vim með meiru.
 * "NERDCommenter":https://github.com/scrooloose/nerdcommenter er viðbót sem einfaldar skjölun á kóða.
