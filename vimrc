@@ -33,6 +33,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'hallettj/jslint.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'bling/vim-airline'
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
   source .vimrc.local
@@ -62,6 +63,7 @@ set t_Co=256    " terminal styður 256 liti
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
+"  set tb=icons,text
 endif
 set tags=tags;/
 
@@ -117,3 +119,7 @@ let NERDTreeHighlightCursorline = 1     " Lýsa upp bendil
 let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna greinar
 
 " let Tlist_Ctags_Cmd = '/usr/local/bin/jsctags'
+
+let g:airline_enable_syntastice=1
+let g:airline_enable_fugutive=1
+setlocal spell spelllang=is
