@@ -7,12 +7,6 @@
 " Amix the luky stiff: http://amix.dk/blog/post/19486#The-ultimate-vim-configuration-vimrc
 " vimcasts.org: http://vimcasts.org
 "
-" Eftirfarandi viðbætur hefur mér þótt ágætt að nota í gegnum tíðina:
-" NERDTree: https://github.com/scrooloose/nerdtree.git
-" SnipMate: https://github.com/msanders/snipmate.vim/tree
-" VimRails: http://github.com/tpope/vim-rails
-" Fugitive: http://github.com/tpope/vim-fugitive
-"
 " Það fyrsta sem við viljum kalla á er vundle til að hlaða inn
 " viðbótum :
 set rtp+=~/.vim/bundle/vundle/
@@ -21,7 +15,7 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
-
+" Svo koma submodule-inn. 
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
@@ -95,7 +89,7 @@ filetype indent on
 filetype plugin on
 "for Syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Sérsniðnir flýtilyklar
 """""""""""""""""""""""""""""""""""""""""""""""""
