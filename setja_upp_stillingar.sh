@@ -22,12 +22,23 @@ function stofna_vimrc () {
 	 ln -s ~/.vim/vimrc ~/.vimrc
 }
 
+function kanna_git () {
+	which git
+	if [ $? -eq 1 ];
+	then
+		echo "Þú þarft að setja inn git"
+	exit 1
+	fi
+}
+
 echo "***************************************************************************"
 echo "Hef innsetningu á vim stillingum"
 echo "***************************************************************************"
 read -sn 1 -p "Ýttu á j til að halda áfram eða einhvern annan hnapp til að hætta við"
 if [ "$REPLY" == "j" ];
 then
+	kanna_git
+
 	if [ -d ~/.vim ];
 	then
 		mv ~/.vim ~/.vim.$DAGS
