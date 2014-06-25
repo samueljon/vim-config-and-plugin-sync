@@ -116,4 +116,5 @@ let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna grein
 
 let g:airline_enable_syntastice=1
 let g:airline_enable_fugutive=1
+let g:airline#extensions#tabline#enabled = 1
 setlocal spell spelllang=is
