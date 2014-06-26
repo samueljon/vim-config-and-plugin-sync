@@ -30,12 +30,12 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'bling/vim-airline'
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
-  source .vimrc.local
+	source .vimrc.local
 endif
 " Kannar hvort stýrikerfisumhverfi sé stillt í unicode og stillir
 " fileencodings í samræmi við það sjá :h v:lang og :h fileencodings
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-   set fileencodings=ucs-bom,utf-8,latin1
+	set fileencodings=ucs-bom,utf-8,latin1
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Grunnstillingar
@@ -55,11 +55,18 @@ set t_Co=256    " terminal styður 256 liti
 " Virkja liti skv. setningarfræði þegar terminal getur sýnt liti
 " ásamt því að lýsa upp síðustu leitarskilyrði
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-"  set tb=icons,text
+	syntax on
+	set hlsearch
+	"  set tb=icons,text
 endif
 set tags=tags;/
+
+if has("gui_running")
+	let s:uname = system("uname")
+	if s:uname == "Darwin\n"
+		set guifont=Inconsolata\ for\ Powerline:h15
+	endif
+endif
 
 " Birta tákn fyrir línubil, nbsp og tab
 set list
@@ -72,8 +79,8 @@ set showcmd
 " Show the current mode
 set showmode
 augroup indent_settings
-    au!
-    au BufEnter *.html setl autoindent smartindent
+	au!
+	au BufEnter *.html setl autoindent smartindent
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,4 +124,15 @@ let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna grein
 let g:airline_enable_syntastice=1
 let g:airline_enable_fugutive=1
 let g:airline#extensions#tabline#enabled = 1
+
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+
 setlocal spell spelllang=is
