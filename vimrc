@@ -27,7 +27,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'hallettj/jslint.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
 	source .vimrc.local
@@ -133,6 +134,6 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
-
+set laststatus=2
 
 setlocal spell spelllang=is
