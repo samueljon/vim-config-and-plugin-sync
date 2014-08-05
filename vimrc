@@ -27,8 +27,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'hallettj/jslint.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'puppetlabs/puppet-syntax-vim'
-"Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'editorconfig/editorconfig-vim'
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
 	source .vimrc.local
