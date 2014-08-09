@@ -9,16 +9,21 @@
 ## Viðbætur 
 
 Eftirfarandi viðbætur koma með í þessari kóðahirslu:
-* "Vundle":https://github.com/gmarik/vundle sér um utanumhald á vim viðbótum. 
-* "Fugitive":https://github.com/tpope/vim-fugitive hjálpar þér við að halda utan um git kóðahirslur.
-* "NERDTree":https://github.com/scrooloose/nerdtree er fyrsta flokks skráarvafri f. vim með meiru.
-* "NERDCommenter":https://github.com/scrooloose/nerdcommenter er viðbót sem einfaldar skjölun á kóða.
-* "Rails":https://github.com/tpope/vim-rails viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
-* "Taglist-plus":https://github.com/int3/vim-taglist-plus útbýr tag skrár fyrir javascriptskrár með aðstoð "doctorjs aka jsctags":http://doctorjs.org/, "nodejs":http://nodejs.org/. "Leiðbeiningar":http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/
-* "JSLint":https://github.com/hallettj/jslint.vim hjálpar við að greina forritunarvillur í javascript kóða. 
-* "JSBeautifier":http://www.vim.org/scripts/script.php?script_id=2727 hreinsar og stillir upp javascript kóðanum þínum. 
-* "wikipedia.vim":https://github.com/vim-scripts/wikipedia.vim til að lita wikipedia skrár (.wiki) skv. setningarfræði wikipedia.
-* "Vim Colours Solarized":https://github.com/altercation/vim-colors-solarized snilldarlitaþema frá "Ethan Schoonover":http://ethanschoonover.com/
+* [Vundle](https://github.com/gmarik/vundle) sér um utanumhald á vim viðbótum. 
+* [Fugitive](https://github.com/tpope/vim-fugitive) hjálpar þér við að halda utan um git kóðahirslur.
+* [NERDTree](https://github.com/scrooloose/nerdtree) er fyrsta flokks skráarvafri f. vim með meiru.
+* [NERDCommenter](https://github.com/scrooloose/nerdcommenter) er viðbót sem einfaldar skjölun á kóða.
+* [Rails](https://github.com/tpope/vim-rails) viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
+* [Taglist-plus](https://github.com/int3/vim-taglist-plus) útbýr tag skrár fyrir
+javascriptskrár með aðstoð [doctorjs aka jsctags](http://doctorjs.org/),
+[nodejs](http://nodejs.org/).
+* [Leiðbeiningar](http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/)
+* [JSLint](https://github.com/hallettj/jslint.vim) hjálpar við að greina forritunarvillur í javascript kóða. 
+* [JSBeautifier](http://www.vim.org/scripts/script.php?script_id=2727) hreinsar og stillir upp javascript kóðanum þínum. 
+* [wikipedia.vim](https://github.com/vim-scripts/wikipedia.vim) til að lita wikipedia skrár (.wiki) skv. setningarfræði wikipedia.
+* [Vim Colours Solarized](https://github.com/altercation/vim-colors-solarized)
+snilldarlitaþema frá "Ethan Schoonover) [http://ethanschoonover.com/](http://ethanschoonover.com/)
+
 
 ## Uppsetning
 
@@ -33,10 +38,12 @@ chmod +x setja_upp_stillingar.sh
 
 ## Notkun
 
-Ég ætla ekki að reyna að útskýra grunnaðgerðir í vi/vim en bendi á vefi eins og "http://vimcasts.org":http://vimcasts.org en þar má finna mjög góða kennslu í formi videóupptakna og handritum af þeim. Vimrc stillingarskráin er skjöluð eftir bestu getu og ætti að útskýra flest af þeim valkostum sem valdir hafa verið.
+Ég ætla ekki að reyna að útskýra grunnaðgerðir í vi/vim en bendi á vefi eins og
+[http://vimcasts.org](http://vimcasts.org) en þar má finna mjög góða kennslu í formi videóupptakna og handritum af þeim. Vimrc stillingarskráin er skjöluð eftir bestu getu og ætti að útskýra flest af þeim valkostum sem valdir hafa verið.
 
 ## Aðgerðalistinn
 
 * [x] Betrubæta uppsetningarskriftu þannig að hún kanni tilurð git.
 * [ ] Halda áfram að skjala notkun og aðrar viðbætur sem bætast við. 
 * [ ] Útbúa uppsetningarskriftu fyrir windows stýrikerfi. 
+
