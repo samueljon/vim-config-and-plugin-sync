@@ -17,7 +17,7 @@ Eftirfarandi viðbætur koma með í þessari kóðahirslu:
 * [Taglist-plus](https://github.com/int3/vim-taglist-plus) útbýr tag skrár fyrir
 javascriptskrár með aðstoð [doctorjs aka jsctags](http://doctorjs.org/),
 [nodejs](http://nodejs.org/).
-* [Leiðbeiningar](http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/)
+[Leiðbeiningar](http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/)
 * [JSLint](https://github.com/hallettj/jslint.vim) hjálpar við að greina forritunarvillur í javascript kóða. 
 * [JSBeautifier](http://www.vim.org/scripts/script.php?script_id=2727) hreinsar og stillir upp javascript kóðanum þínum. 
 * [wikipedia.vim](https://github.com/vim-scripts/wikipedia.vim) til að lita wikipedia skrár (.wiki) skv. setningarfræði wikipedia.
