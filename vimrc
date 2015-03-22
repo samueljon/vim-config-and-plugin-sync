@@ -29,6 +29,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'terryma/vim-multiple-cursors'
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
 	source .vimrc.local
@@ -138,3 +139,25 @@ set termencoding=utf-8
 set laststatus=2
 
 setlocal spell spelllang=is
+
+" https://github.com/terryma/vim-multiple-cursors
+" Default mapping
+" let g:multi_cursor_next_key='<C-n>'
+" let g:multi_cursor_prev_key='<C-p>'
+" let g:multi_cursor_skip_key='<C-x>'
+" let g:multi_cursor_quit_key='<Esc>'
+"
+" By default, the 'next' key is also used to enter multicursor mode. If you want
+" to use a different key to start multicursor mode than for selecting the next
+" location, do like the following:
+"
+" " Map start key separately from next key
+" let g:multi_cursor_start_key='<F6>'
+"
+" Note that when multicursor mode is started, it selects current word without
+" boundaries, i.e. it behaves like g*. If you want to use word boundaries in
+" Normal mode (as * does) but still have old behaviour up your sleeve, you can
+" do the following:
+"
+" let g:multi_cursor_start_key='g<C-n>'
+" let g:multi_cursor_start_word_key='<C-n>'
