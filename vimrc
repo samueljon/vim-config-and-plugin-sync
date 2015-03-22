@@ -66,6 +66,7 @@ if has("gui_running")
 	let s:uname = system("uname")
 	if s:uname == "Darwin\n"
 		set guifont=Inconsolata\ for\ Powerline:h15
+        set guioptions=T
 	endif
 endif
 
