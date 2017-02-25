@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
 " Höfundur: Samúel Jón Gunnarsson
 " Lýsing: vim resource skrá aka vimrc
 "
@@ -29,6 +29,7 @@ Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'nginx.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
