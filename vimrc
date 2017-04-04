@@ -179,3 +179,9 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+" Let's learn hjkl traversal
+map <up> :echoerr "Stop being stupid"<CR>
+map <down> :echoerr "Stop being stupid"<CR>
+map <left> :echoerr "Stop being stupid"<CR>
+map <right> :echoerr "Stop being stupid"<CR>
