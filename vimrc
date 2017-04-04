@@ -19,8 +19,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-haml'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'hallettj/jslint.vim'
@@ -29,6 +27,8 @@ Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'godlygeek/tabular'
+Plugin 'nginx.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +36,7 @@ filetype plugin indent on    " required
 
 " lesa inn staðbundnar vimrc stillingar ef þær finnast 
 if filereadable(".vimrc.local")
-	source .vimrc.local
+    source .vimrc.local
 endif
 " Kannar hvort stýrikerfisumhverfi sé stillt í unicode og stillir
 " fileencodings í samræmi við það sjá :h v:lang og :h fileencodings
@@ -63,7 +63,7 @@ set t_Co=256    " terminal styður 256 liti
 if &t_Co > 2 || has("gui_running")
 	syntax on
 	set hlsearch
-	"  set tb=icons,text
+	"set tb=icons,text
 endif
 set tags=tags;/
 
@@ -71,7 +71,7 @@ if has("gui_running")
 	let s:uname = system("uname")
 	if s:uname == "Darwin\n"
 		set guifont=Inconsolata\ for\ Powerline:h15
-        set guioptions=T
+		set guioptions=T
 	endif
 endif
 
@@ -114,9 +114,9 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 let mapleader = ","
 " Héreftir er hægt að nota <leader> sem tilvísun í , sem leader.
 " Músaraðgerðir
-nnoremap <2-LeftMouse> <C-]> "Leyfir tvíklikk sem hoppar í taglist-a
-nnoremap <MiddleMouse> <C-T> "Hoppar tilbaka úr taglista
-set mouse=a 
+"nnoremap <2-LeftMouse> <C-]> "Leyfir tvíklikk sem hoppar í taglist-a
+"nnoremap <MiddleMouse> <C-T> "Hoppar tilbaka úr taglista
+"set mouse=a 
 """"""""""""""""""""""
 " NERDTree Stillingar
 """"""""""""""""""""""
