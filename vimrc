@@ -30,6 +30,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 Plugin 'nginx.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'shawncplus/phpcomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
