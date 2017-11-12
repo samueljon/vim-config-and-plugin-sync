@@ -6,24 +6,9 @@
 
 Ég hvet alla sem þá sem geta nýtt sér þessar stillingar og hafa tillögur að betrumbótum að senda mér línu eða að "fork-a" þessa kóðahirslu og gera að sinni. Ekki væri verra ef það skilaði sér í betri stillingum fyrir mig líka. 
 
-## Viðbætur 
-
-Eftirfarandi viðbætur koma með í þessari kóðahirslu:
-* [Vundle](https://github.com/gmarik/vundle) sér um utanumhald á vim viðbótum. 
-* [Fugitive](https://github.com/tpope/vim-fugitive) hjálpar þér við að halda utan um git kóðahirslur.
-* [NERDTree](https://github.com/scrooloose/nerdtree) er fyrsta flokks skráarvafri f. vim með meiru.
-* [NERDCommenter](https://github.com/scrooloose/nerdcommenter) er viðbót sem einfaldar skjölun á kóða.
-* [Rails](https://github.com/tpope/vim-rails) viðbótin frá Tim Pope til aðstoðar við forritun á Ruby on Rails rammaumhverfinu.
-* [Taglist-plus](https://github.com/int3/vim-taglist-plus) útbýr tag skrár fyrir
-javascriptskrár með aðstoð [doctorjs aka jsctags](http://doctorjs.org/),
-[nodejs](http://nodejs.org/).
-[Leiðbeiningar](http://discontinuously.com/2011/03/vim-support-javascript-taglist-plus/)
-* [JSLint](https://github.com/hallettj/jslint.vim) hjálpar við að greina forritunarvillur í javascript kóða. 
-* [JSBeautifier](http://www.vim.org/scripts/script.php?script_id=2727) hreinsar og stillir upp javascript kóðanum þínum. 
-* [wikipedia.vim](https://github.com/vim-scripts/wikipedia.vim) til að lita wikipedia skrár (.wiki) skv. setningarfræði wikipedia.
-* [Vim Colours Solarized](https://github.com/altercation/vim-colors-solarized)
-snilldarlitaþema frá "Ethan Schoonover) [http://ethanschoonover.com/](http://ethanschoonover.com/)
-
+## Viðbætur
+Sjá skjölun á hverri viðbót fyrir sig inn á https://github.com/"notandi"/"nafn á
+plugin"
 
 ## Uppsetning
 

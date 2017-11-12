@@ -16,21 +16,30 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Svo koma submodule-inn. 
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'hallettj/jslint.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'godlygeek/tabular'
+"Plugin 'godlygeek/tabular'
 Plugin 'nginx.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+" https://github.com/w0rp/ale
+Plugin 'w0rp/ale'
+" https://github.com/itchyny/lightline.vim
+Plugin 'itchyny/lightline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -43,7 +52,7 @@ endif
 " Kannar hvort stýrikerfisumhverfi sé stillt í unicode og stillir
 " fileencodings í samræmi við það sjá :h v:lang og :h fileencodings
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-	set fileencodings=ucs-bom,utf-8,latin1
+    set fileencodings=ucs-bom,utf-8,latin1
 endif
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Grunnstillingar
@@ -63,18 +72,18 @@ set t_Co=256    " terminal styður 256 liti
 " Virkja liti skv. setningarfræði þegar terminal getur sýnt liti
 " ásamt því að lýsa upp síðustu leitarskilyrði
 if &t_Co > 2 || has("gui_running")
-	syntax on
-	set hlsearch
-	"set tb=icons,text
+    syntax on
+    set hlsearch
+    "set tb=icons,text
 endif
 set tags=tags;/
 
 if has("gui_running")
-	let s:uname = system("uname")
-	if s:uname == "Darwin\n"
-		set guifont=Inconsolata\ for\ Powerline:h15
-		set guioptions=T
-	endif
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        set guifont=Inconsolata\ for\ Powerline:h15
+        set guioptions=T
+    endif
 endif
 
 " Birta tákn fyrir línubil, nbsp og tab
@@ -88,8 +97,8 @@ set showcmd
 " Show the current mode
 set showmode
 augroup indent_settings
-	au!
-	au BufEnter *.html setl autoindent smartindent
+    au!
+    au BufEnter *.html setl autoindent smartindent
 augroup END
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,6 +154,63 @@ set termencoding=utf-8
 set laststatus=2
 
 setlocal spell spelllang=is
+" ALE
+let g:ale_sign_warning = '▲'
+let g:ale_sign_error = '✗'
+highlight link ALEWarningSign String
+highlight link ALEErrorSign Title
+" ALE config endar
+
+" Lightline
+let g:lightline = {
+\ 'colorscheme': 'solarized',
+\ 'active': {
+\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\ },
+\ 'component_expand': {
+\   'linter_warnings': 'LightlineLinterWarnings',
+\   'linter_errors': 'LightlineLinterErrors',
+\   'linter_ok': 'LightlineLinterOK'
+\ },
+\ 'component_type': {
+\   'readonly': 'error',
+\   'linter_warnings': 'warning',
+\   'linter_errors': 'error'
+\ },
+\ }
+
+function! LightlineLinterWarnings() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ◆', all_non_errors)
+endfunction
+
+function! LightlineLinterErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ✗', all_errors)
+endfunction
+
+function! LightlineLinterOK() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '✓ ' : ''
+endfunction
+
+autocmd User ALELint call s:MaybeUpdateLightline()
+
+" Update and show lightline but only if it's visible (e.g., not in Goyo)
+function! s:MaybeUpdateLightline()
+  if exists('#lightline')
+    call lightline#update()
+  end
+endfunction
+"end thinline
+
 
 " https://github.com/terryma/vim-multiple-cursors
 " Default mapping
@@ -172,14 +238,14 @@ setlocal spell spelllang=is
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 function! s:align()
-  let p = '^\s*|\s.*\s|\s*$'
-  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-    Tabularize/|/l1
-    normal! 0
-    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
-  endif
+    let p = '^\s*|\s.*\s|\s*$'
+    if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+        let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+        let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+        Tabularize/|/l1
+        normal! 0
+        call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+    endif
 endfunction
 
 " Let's learn hjkl traversal
