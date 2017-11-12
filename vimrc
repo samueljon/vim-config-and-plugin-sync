@@ -15,21 +15,21 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Svo koma submodule-inn. 
-Plugin 'scrooloose/nerdtree'
 "Plugin 'scrooloose/nerdcommenter'
 "Plugin 'scrooloose/syntastic'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'godlygeek/tabular'
+"Plugin 'nginx.vim'
+"Plugin 'kchmck/vim-coffee-script'
 "Plugin 'plasticboy/vim-markdown'
 "Plugin 'hallettj/jslint.vim'
 "Plugin 'Valloric/YouCompleteMe'
-Plugin 'puppetlabs/puppet-syntax-vim'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'scrooloose/nerdtree'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'puppetlabs/puppet-syntax-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'godlygeek/tabular'
-"Plugin 'nginx.vim'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-fugitive'
@@ -86,11 +86,17 @@ if has("gui_running")
     endif
 endif
 
+try
+    colorscheme solarized
+catch /^Vim\%((\a\+)\)\=:E185/
+    " Mögulega setja annað colorscheme meðan solarized er ekki uppsett
+    colorscheme default
+endtry
+
 " Birta tákn fyrir línubil, nbsp og tab
 set list
 set listchars=trail:⋅,nbsp:⋅,tab:▷⋅
 set background=dark " Sjá readme f. litaþema solarized. Fyrir ljóst þema notið background=light
-colorscheme solarized " litaþema sjá :h colorscheme
 let &guicursor = &guicursor . ",a:blinkon0"	"Slökkvum á blikkandi bendli
 " Show the current command in the lower right corner
 set showcmd
@@ -162,8 +168,8 @@ highlight link ALEErrorSign Title
 " ALE config endar
 
 " Lightline
+" \ 'colorscheme': 'solarized',
 let g:lightline = {
-\ 'colorscheme': 'solarized',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
 \   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
