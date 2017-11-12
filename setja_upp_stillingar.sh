@@ -26,6 +26,10 @@ function kanna_git () {
     fi
 }
 
+function setja_inn_vidbaetur() {
+    vim +PluginInstall +qall
+}
+
 echo "***************************************************************************"
 echo "Hef innsetningu á vim stillingum"
 echo "***************************************************************************"
@@ -49,6 +53,9 @@ then
     else
         stofna_vimrc
     fi
+
+    setja_inn_vidbaetur
+
     echo "***************************************************************************"
     echo "* I haz success ! Fyrri stillingar afritaðar sem .vimrc.$DAGS og .vim.$DAGS"
     echo "***************************************************************************"

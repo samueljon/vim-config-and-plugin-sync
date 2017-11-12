@@ -20,15 +20,15 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'hallettj/jslint.vim'
+"Plugin 'plasticboy/vim-markdown'
+"Plugin 'hallettj/jslint.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'puppetlabs/puppet-syntax-vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
 "Plugin 'godlygeek/tabular'
-Plugin 'nginx.vim'
+"Plugin 'nginx.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'sheerun/vim-polyglot'
@@ -81,7 +81,7 @@ set tags=tags;/
 if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        set guifont=Inconsolata\ for\ Powerline:h15
+"        set guifont=Inconsolata\ for\ Powerline:h15
         set guioptions=T
     endif
 endif
@@ -139,13 +139,13 @@ let NERDTreeMapActivateNode='<CR>'      " Virkja Enter/Return til að opna grein
 
 " let Tlist_Ctags_Cmd = '/usr/local/bin/jsctags'
 
-let g:airline_enable_syntastice=1
-let g:airline_enable_fugutive=1
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline_enable_syntastice=1
+"let g:airline_enable_fugutive=1
+"let g:airline#extensions#tabline#enabled = 1
 
 
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
+"set guifont=Inconsolata\ for\ Powerline:h15
+"let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
